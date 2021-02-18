@@ -4,7 +4,7 @@ Docker container for starting a [ClamAV](http://www.clamav.net/) daemon.
 
 ## Getting Started
 
-These instructions will cover how to start a container both in Docker and within a [Kubernetes][Kubernetes link] cluster.
+These instructions will cover how to start a container both in Docker and within a [Kubernetes][Kubernetes link] or Swarm cluster.
 
 ### Prerequisites
 
@@ -14,9 +14,6 @@ In order to run this container you'll need docker installed.
 * [OS X](https://docs.docker.com/docker-for-mac/)
 * [Linux](https://docs.docker.com/linux/started/)
 
-Optionally:
-
-* A [Kubernetes][Kubernetes link] cluster to enable Kubernetes api discovery of other nodes.
 
 ### Usage
 
@@ -27,6 +24,7 @@ docker run --name clamav -d -p 3310:3310 docker.pkg.github.com/churchdesk/docker
 ```
 
 To use with [Kubernetes][Kubernetes link] see the [kubernetes examples](examples/kubernetes.md).
+To use with Docker Swarm Cluster see the [swarm examples](examples/swarm.yml).
 
 
 #### Environment Variables
@@ -63,8 +61,7 @@ By participating in this project you agree to abide by its terms.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the
-[tags on this repository](https://github.com/UKHomeOffice/docker-clamav/tags).
+We mirror the CLAM_VERSION for version tags.
 
 ## Authors
 
@@ -80,12 +77,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * http://www.clamav.net/
+* Forked from UKHomeOffice/docker-clamav
 
 ## TODO:
 
 * Ensure the DB access doesn't need to be for user 999 (so the volume can be mounted)...
 * Long startup time, see point above.
-* Add testing for Travis
 
 
 [Kubernetes link]: https://kubernetes.io/
